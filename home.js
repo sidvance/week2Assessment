@@ -86,9 +86,10 @@ console.log(canWeDeliver(85205))
     Name your new function `canWeDeliverTwo`.
 */
 
-const canWeDeliverTwo = deliveryAreaZipCodes.filter((zipCode) => zipCode === zipCode)
-//         return 'Congrats, you did it!!! World\'s best delivery zone!'
-// })
+const canWeDeliverTwo = deliveryAreaZipCodes.includes((zipCode) => 
+    if(zipCode === deliveryAreaZipCodes[0]){
+    console.log('Congrats, you did it!!! World\'s best delivery zone!')
+    })
 console.log(canWeDeliverTwo)
 
 
@@ -127,18 +128,18 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-const newDeal = deals.replace(deals.title, "title: '10% Off!'")
-console.log(newDeal)
+// const newDeal = deals.replace(deals.title, "title: '10% Off!'")
+// console.log(newDeal)
 
-const identifier = (arr) => {
-    // for (let i = 0; i < arr.length; i++){
-    //     if(arr[i].programmer){
-    //         console.log(arr[i])
-    //     }
-    // }
-    const filtered = arr.filter((element) => element.programmer)
-    return filtered[0]
-}
+// const identifier = (arr) => {
+//     // for (let i = 0; i < arr.length; i++){
+//     //     if(arr[i].programmer){
+//     //         console.log(arr[i])
+//     //     }
+//     // }
+//     const filtered = arr.filter((element) => element.programmer)
+//     return filtered[0]
+// }
 
 
 /*

@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,7 +54,13 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let postTax = cartTotal * (tax + 1);
+    let coupon = postTax - couponValue;
+    return coupon
+}
+
+// console.log(calcFinalPrice(100, 10, .05))
 
 
 
@@ -78,7 +85,10 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    A restaurant should know how much on avgerage a customer
+    is willing to spend (num), what is their preferred meal type
+    (string), what type of drink they want (string), and if they 
+    like Justin Bieber (boolean).
 
 */
 
@@ -87,4 +97,10 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    budget: 15,
+    mealType: 'Breakfast',
+    drink: 'diet coke',
+    likesJB: true
+}
+

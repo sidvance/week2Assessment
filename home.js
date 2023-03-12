@@ -55,18 +55,13 @@ const canWeDeliver = zipCode => {
     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
     if(zipCode === deliveryAreaZipCodes[i]){
         console.log('Congrats, you did it!!! World\'s best delivery zone!')
-    }else{ console.log ('Sucks to be you, find someone else to deliver.')}
-} 
+        return
+    } 
+} console.log ('Sucks to be you, find someone else to deliver.')
 }
 
-console.log(canWeDeliver(85205))
 
-// deliveryAreaZipCodes.find((zipCode) => {
-//     if(zipCode === zipCode){
-//         console.log('Congrats, you did it!!! World\'s best delivery zone!')
-//     }else{ console.log('Find someone else to do your dirty work.')}
-// })
-
+canWeDeliver(85205)
 
 
 /* 
@@ -86,11 +81,14 @@ console.log(canWeDeliver(85205))
     Name your new function `canWeDeliverTwo`.
 */
 
-const canWeDeliverTwo = deliveryAreaZipCodes.includes((zipCode) => 
-    if(zipCode === deliveryAreaZipCodes[0]){
-    console.log('Congrats, you did it!!! World\'s best delivery zone!')
-    })
-console.log(canWeDeliverTwo)
+const canWeDeliverTwo = zipcode => {
+    if(deliveryAreaZipCodes.includes(zipcode)){
+        console.log('Congrats, you did it!!! World\'s best delivery zone!')
+    } else {
+        console.log('Deliver it yourself, smarty pants.')
+    }
+}
+canWeDeliverTwo(85905)
 
 
 
@@ -128,18 +126,12 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-// const newDeal = deals.replace(deals.title, "title: '10% Off!'")
-// console.log(newDeal)
+const newDeal = deals[0].title.replace('15%', '10%')
+deals[0].title = newDeal
+console.log(newDeal)
+console.log(deals)
 
-// const identifier = (arr) => {
-//     // for (let i = 0; i < arr.length; i++){
-//     //     if(arr[i].programmer){
-//     //         console.log(arr[i])
-//     //     }
-//     // }
-//     const filtered = arr.filter((element) => element.programmer)
-//     return filtered[0]
-// }
+
 
 
 /*
@@ -155,4 +147,5 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace('March', 'April')
+console.log(deals)
